@@ -72,10 +72,10 @@ function CartItem({ item, index, locale, currency }: Props) {
         {/* Price Block */}
         <div class="flex items-center gap-2">
           <span class="line-through text-sm">
-            {formatPrice(listPrice, currency, locale)}
+            {formatPrice(listPrice, "USD")}
           </span>
           <span class="text-sm text-secondary">
-            {isGift ? "Grátis" : formatPrice(price, currency, locale)}
+            {isGift ? "Grátis" : formatPrice(price, "USD")}
           </span>
         </div>
 

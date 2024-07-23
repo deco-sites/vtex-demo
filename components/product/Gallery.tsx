@@ -5,14 +5,15 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
+import productDetailsPageVideo from "apps/vnda/loaders/productDetailsPageVideo.ts";
 
 export interface Props {
   /** @title Integration */
   page: ProductDetailsPage | null;
 }
 
-const WIDTH = 820;
-const HEIGHT = 615;
+const WIDTH = 695;
+const HEIGHT = 889;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 /**
@@ -29,13 +30,9 @@ export default function GallerySlider(props: Props) {
     throw new Error("Missing Product Details Page Info");
   }
 
-  const { page: { product: { name, isVariantOf } } } = props;
+  const { page: { product: { image } } } = props;
 
-  // Filter images when image's alt text matches product name
-  // More info at: https://community.shopify.com/c/shopify-discussions/i-can-not-add-multiple-pictures-for-my-variants/m-p/2416533
-  const groupImages = isVariantOf?.image ?? [];
-  const filtered = groupImages.filter((img) => img.alternateName === name);
-  const images = filtered.length > 0 ? filtered : groupImages;
+  const images = image;
 
   return (
     <>
@@ -47,7 +44,7 @@ export default function GallerySlider(props: Props) {
         <div class="col-start-1 col-span-1 sm:col-start-2">
           <div class="relative h-min flex-grow">
             <Slider class="carousel carousel-center gap-6 w-full">
-              {images.map((img, index) => (
+              {images?.map((img, index) => (
                 <Slider.Item
                   index={index}
                   class="carousel-item w-full"
@@ -77,7 +74,7 @@ export default function GallerySlider(props: Props) {
 
             <Slider.NextButton
               class="no-animation absolute right-2 top-1/2 btn btn-circle btn-outline disabled:invisible"
-              disabled={images.length < 2}
+              disabled={(images?.length || 0) < 2}
             >
               <Icon id="chevron-right" />
             </Slider.NextButton>
@@ -100,7 +97,7 @@ export default function GallerySlider(props: Props) {
             )}
             style={{ maxHeight: "600px" }}
           >
-            {images.map((img, index) => (
+            {images?.map((img, index) => (
               <li class="carousel-item w-16 h-16">
                 <Slider.Dot index={index}>
                   <Image
@@ -119,12 +116,12 @@ export default function GallerySlider(props: Props) {
 
         <Slider.JS rootId={id} />
       </div>
-      <ProductImageZoom
+      {images && <ProductImageZoom
         id={zoomId}
         images={images}
         width={700}
         height={Math.trunc(700 * HEIGHT / WIDTH)}
-      />
+      />}
     </>
   );
 }
