@@ -26,9 +26,12 @@
       "products": {
         "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
-          "query": "pink t-shirt",
-          "sort": "price:desc",
-          "count": 4
+          "query": "shirt",
+          "sort": "",
+          "count": 10,
+          "hideUnavailableItems": true,
+          "fuzzy": "automatic",
+          "similars": true
         }
       }
     },

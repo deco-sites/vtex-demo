@@ -2,49 +2,32 @@
   "items": [
     {
       "@type": "SiteNavigationElement",
-      "url": "/deals",
-      "name": "Deals",
-      "children": [
-        {
-          "image": [],
-          "children": [],
-          "name": "Hello"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "World"
-        }
-      ]
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "url": "/valentines-day",
-      "name": "Valentine's Day",
+      "url": "/new-arrivals",
+      "name": "New Arrivals",
       "children": []
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/women",
-      "name": "Women",
+      "url": "/clothing",
+      "name": "Clothing",
       "children": []
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/men",
-      "name": "Men",
+      "url": "/shoes",
+      "name": "Shoes",
       "children": []
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/clearance",
-      "name": "Clearance",
+      "url": "/accessories",
+      "name": "Accessories",
       "children": []
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
+      "url": "/highlights",
+      "name": "Highlights",
       "children": []
     }
   ],
