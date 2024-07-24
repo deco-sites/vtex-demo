@@ -8,9 +8,9 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/72662931-91a6-4b20-94a8-01fcbdc6d61f",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/b4790789-acb1-4680-919c-99435308e4c5",
-          "alt": "Shoes",
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/a3ab2162-b044-4085-bde3-48bf1199aea2",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/ddd3c065-da2e-4bc3-b013-4657569173ff",
+          "alt": "Cover",
           "action": {
             "title": " ",
             "subTitle": " ",
@@ -28,12 +28,14 @@
         "props": {
           "query": "shirt",
           "sort": "",
-          "count": 10,
           "hideUnavailableItems": true,
           "fuzzy": "automatic",
-          "similars": true
+          "similars": true,
+          "count": 20
         }
-      }
+      },
+      "title": "New Arrivals",
+      "cta": "/new-arrivals"
     },
     {
       "__resolveType": "site/sections/Category/CategoryGrid.tsx",
@@ -41,56 +43,46 @@
       "cta": "/all",
       "items": [
         {
-          "label": "Men",
-          "href": "/",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/38c33c9f-14a1-4048-973b-dc2a75caf1fa"
+          "label": "Clothing",
+          "href": "/clothing",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/96d607e2-7d0c-4759-9406-806cf8b31baf"
         },
         {
-          "href": "/",
-          "label": "Women",
+          "href": "/shoes",
+          "label": "Shoes",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f6bea2b8-b248-4b42-9246-6e924a0acc8b"
         },
         {
-          "href": "/",
-          "label": "Kids",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/1b0ecaa2-9a13-4de2-bf17-5196948ed128"
-        },
-        {
-          "href": "/",
-          "label": "Hats",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/36e97897-5cf7-4271-a71c-683dc732ef8c"
-        },
-        {
-          "href": "/",
+          "href": "/accessories",
           "label": "Accessories",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/92129655-fe40-4b29-8fdb-e7f71e67a5d1"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/acb38471-b412-4aa4-b669-d7790a7c2691"
         },
         {
-          "href": "/",
-          "label": "Home & Living",
+          "href": "/Highlights",
+          "label": "Highlights",
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d0433c00-cd26-4638-b519-0cb64b9f82e8"
         }
       ]
     },
     {
       "__resolveType": "site/sections/Images/Banner.tsx",
-      "title": "Register to Save",
       "cta": {
-        "label": "Sign Up",
-        "href": "#"
+        "href": "#",
+        "label": "Discover"
       },
-      "description": "<p><span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">Sign up now to get up to 50% off on your first order. Limited time offer!</span></p>",
+      "description": "<p><br data-mce-bogus=\"1\"></p>",
       "images": {
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/cf96d47f-564f-40da-ad94-7acac5f39327",
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4d5c3212-3f75-4d50-89f3-970815748b43"
-      }
+        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/97e9c5e5-9973-4cb6-9f85-746d3ed72d47",
+        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/8f8cee65-17e2-4c3d-866f-0a9fad4711ab"
+      },
+      "title": "Custom made"
     },
     {
       "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
       "label": "Sign up",
       "placeholder": "Email address",
       "empty": {
-        "title": "Get top deals, latest trends, and more.",
+        "title": "NEWSLETTER",
         "description": "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here."
       },
       "success": {

@@ -2,12 +2,6 @@
   "items": [
     {
       "@type": "SiteNavigationElement",
-      "url": "/new-arrivals",
-      "name": "New Arrivals",
-      "children": []
-    },
-    {
-      "@type": "SiteNavigationElement",
       "url": "/clothing",
       "name": "Clothing",
       "children": []
