@@ -85,13 +85,17 @@ const Desktop = (
           {navItems?.slice(0, 4).map((item) => <NavItem item={item} />)}
         </ul>
 
-        <label
-          for={SEARCHBAR_POPUP_ID}
-          class="input flex justify-end items-center gap-2 w-full"
-          aria-label="search icon button"
-        >
-          <Icon id="search" />
-        </label>
+        <div class="w-full flex items-center justify-end gap-2">
+          <label
+            for={SEARCHBAR_POPUP_ID}
+            class="btn btn-square btn-sm flex justify-end items-center gap-2 mt-[1px]"
+            aria-label="search icon button"
+          >
+            <Icon id="search" />
+          </label>
+          <SignIn variant="desktop" />
+          <Bag />
+        </div>
       </div>
     </div>
   </>

@@ -28,29 +28,27 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
   const id = useId();
 
   return (
-    <div id={id}>
+    <div id={id} class="mt-[1px]">
       <a
         class={clx(
-          "btn btn-sm font-thin btn-ghost no-animation",
+          "btn btn-square btn-sm font-thin btn-ghost no-animation flex gap-1",
           variant === "mobile" && "btn-square",
         )}
         href="/login"
         aria-label="Login"
       >
         <Icon id="account_circle" />
-        {variant === "desktop" && <span>Sign in</span>}
       </a>
       <a
         class={clx(
           "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
+          "btn btn-sm font-thin btn-ghost no-animation flex gap-1",
           variant === "mobile" && "btn-square",
         )}
         href="/account"
         aria-label="Account"
       >
         <Icon id="account_circle" />
-        {variant === "desktop" && <span>My account</span>}
       </a>
       <script
         type="module"
