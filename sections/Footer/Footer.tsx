@@ -1,6 +1,7 @@
 import { type ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
 import PoweredByDeco from "apps/website/components/PoweredByDeco.tsx";
+import { useScript } from "deco/hooks/useScript.ts";
 
 /** @titleBy title */
 interface Item {
@@ -36,7 +37,9 @@ function Footer({
   paymentMethods = [],
   logo,
   trademark,
-}: Props) {
+  url : _url
+}: Props & {url: string}) {
+  const url = new URL(_url)
   return (
     <footer
       class="px-5 sm:px-0 mt-5 sm:mt-10"
@@ -94,15 +97,19 @@ function Footer({
         <hr class="w-full text-base-300" />
 
         <div class="grid grid-flow-row sm:grid-flow-col gap-8">
-          <ul class="flex flex-col sm:flex-row gap-2 sm:gap-4 sm:items-center">
-            {policies.map(({ title, href }) => (
-              <li>
-                <a class="text-xs font-medium" href={href}>
-                  {title}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <select 
+            class="rounded-full cursor-pointer px-2"
+            hx-on:change={useScript(() => {
+              const path = event?.target?.value;
+              if (path) {
+                window.location.href = `/${path}`;
+              }
+            })}
+          >
+            <option value="en" selected={url.pathname.includes("/en")}>English</option>
+            <option value="pt" selected={url.pathname.includes("/pt")}>Portuguese</option>
+            <option value="es" selected={url.pathname.includes("/es")}>Spanish</option>
+          </select>
 
           <div class="flex flex-nowrap items-center justify-between sm:justify-center gap-4">
             <div>
@@ -122,3 +129,11 @@ function Footer({
 }
 
 export default Footer;
+
+export const loader = (props: Props, req: Request) => {
+
+  return {
+    ...props,
+    url: req.url
+  }
+}
