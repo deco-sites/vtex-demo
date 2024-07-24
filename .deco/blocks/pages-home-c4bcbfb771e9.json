@@ -39,27 +39,26 @@
     {
       "__resolveType": "site/sections/Category/CategoryGrid.tsx",
       "title": "Departments",
-      "cta": "/all",
       "items": [
         {
           "label": "Clothing",
           "href": "/clothing",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/96d607e2-7d0c-4759-9406-806cf8b31baf"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/f3e1e555-e591-421b-9a40-9e74e9e399b7"
         },
         {
           "href": "/shoes",
           "label": "Shoes",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f6bea2b8-b248-4b42-9246-6e924a0acc8b"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/6ad95968-98fa-420d-97bf-68042edf1981"
         },
         {
           "href": "/accessories",
           "label": "Accessories",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/acb38471-b412-4aa4-b669-d7790a7c2691"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/dbbdb9fc-0a12-44be-963e-6f92678d28bf"
         },
         {
           "href": "/Highlights",
           "label": "Highlights",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d0433c00-cd26-4638-b519-0cb64b9f82e8"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/9caf2e01-95c2-49c2-8408-9a733a160851"
         }
       ]
     },
