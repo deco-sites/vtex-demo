@@ -8,6 +8,11 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/3e926bd4-a456-4b3d-9245-7aa7a6140261",
+          "alt": "Brown banner",
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/97e9c5e5-9973-4cb6-9f85-746d3ed72d47"
+        },
+        {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/a3ab2162-b044-4085-bde3-48bf1199aea2",
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/317a968a-3364-47b8-b615-72a4de9769e3",
           "alt": "Main banner",
@@ -17,11 +22,6 @@
             "href": " ",
             "label": "Hi"
           }
-        },
-        {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/97e9c5e5-9973-4cb6-9f85-746d3ed72d47",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/3e926bd4-a456-4b3d-9245-7aa7a6140261",
-          "alt": "Brown banner"
         },
         {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/7e27b745-b29e-49ce-ad86-72c4a2ca8b85",
@@ -73,17 +73,45 @@
       ]
     },
     {
-      "__resolveType": "site/sections/Images/Banner.tsx",
-      "cta": {
-        "label": "Discover",
-        "href": "/made-to-measure"
-      },
-      "description": "<p><br data-mce-bogus=\"1\"></p>",
-      "images": {
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/7b0ecb82-0456-40fd-a132-3cc07281b086",
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/8f8cee65-17e2-4c3d-866f-0a9fad4711ab"
-      },
-      "title": "Custom made"
+      "__resolveType": "website/flags/multivariate/section.ts",
+      "variants": [
+        {
+          "value": {
+            "__resolveType": "site/sections/Images/Banner.tsx",
+            "cta": {
+              "label": "Discover",
+              "href": "/made-to-measure"
+            },
+            "description": "<p><br data-mce-bogus=\"1\"></p>",
+            "images": {
+              "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/7b0ecb82-0456-40fd-a132-3cc07281b086",
+              "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/78c5db57-7b29-4c8c-829f-d8b4d2d1f5e0"
+            },
+            "title": "Custom made"
+          },
+          "rule": {
+            "__resolveType": "AB test - Banner Home"
+          }
+        },
+        {
+          "value": {
+            "__resolveType": "site/sections/Images/Banner.tsx",
+            "cta": {
+              "label": "Discover",
+              "href": "/made-to-measure"
+            },
+            "description": "<p><br data-mce-bogus=\"1\"></p>",
+            "images": {
+              "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/7b0ecb82-0456-40fd-a132-3cc07281b086",
+              "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/8f8cee65-17e2-4c3d-866f-0a9fad4711ab"
+            },
+            "title": "Custom made"
+          },
+          "rule": {
+            "__resolveType": "website/matchers/always.ts"
+          }
+        }
+      ]
     },
     {
       "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
