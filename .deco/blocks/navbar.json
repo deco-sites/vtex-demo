@@ -20,7 +20,7 @@
     },
     {
       "@type": "SiteNavigationElement",
-      "url": "/highlights",
+      "url": "/new-arrivals",
       "name": "Highlights",
       "children": []
     }

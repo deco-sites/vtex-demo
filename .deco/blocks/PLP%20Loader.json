@@ -2,7 +2,7 @@
   "data": {
     "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
     "count": 12,
-    "sort": "",
+    "sort": "release:desc",
     "selectedFacets": [],
     "hideUnavailableItems": true,
     "similars": true
