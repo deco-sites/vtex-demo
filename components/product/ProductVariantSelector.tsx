@@ -77,7 +77,7 @@ function VariantSelector({ product }: Props) {
       {Object.keys(possibilities).map((name) => (
         <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
-          <ul class="flex flex-row gap-4">
+          <ul class="flex flex-row gap-2 md:gap-0 justify-between overflow-x-auto max-w-full p-2 md:overflow-hidden md:p-0 md:h-[60px] md:items-center">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {
@@ -85,7 +85,7 @@ function VariantSelector({ product }: Props) {
                 const checked = relativeLink === relativeUrl;
 
                 return (
-                  <li>
+                  <li class="inline-block shrink-0 max-w-full">
                     <label
                       class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
                       hx-get={useSection({ href: relativeLink })}
