@@ -116,12 +116,14 @@ export default function GallerySlider(props: Props) {
 
         <Slider.JS rootId={id} />
       </div>
-      {images && <ProductImageZoom
-        id={zoomId}
-        images={images}
-        width={700}
-        height={Math.trunc(700 * HEIGHT / WIDTH)}
-      />}
+      {images && (
+        <ProductImageZoom
+          id={zoomId}
+          images={images}
+          width={700}
+          height={Math.trunc(700 * HEIGHT / WIDTH)}
+        />
+      )}
     </>
   );
 }

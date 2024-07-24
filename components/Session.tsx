@@ -306,7 +306,7 @@ export const loader = (
   _req: Request,
   _ctx: AppContext,
 ) => {
-  console.log("loader page", _req.url)
+  console.log("loader page", _req.url);
   return {
     mode: "lazy",
   };
