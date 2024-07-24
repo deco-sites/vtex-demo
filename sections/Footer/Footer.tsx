@@ -101,8 +101,23 @@ function Footer({
             class="rounded-full cursor-pointer px-2"
             hx-on:change={useScript(() => {
               const path = event?.target?.value;
-              if (path) {
+              const url = new URL(window.location.href);
+              if(path == "en"){
+                const newPath = url.pathname.replace("/es", "/").replace("/pt", "/")
+                window.location.href = newPath
+                return
+              }
+              if(url.pathname == "/"){
                 window.location.href = `/${path}`;
+                return
+              }else{
+                if(url.pathname.endsWith("/es") || url.pathname.endsWith("/pt")){
+                  const newPathName = url.pathname.replace("/es", `/${path}`).replace("/pt", `/${path}`)
+                  url.pathname = newPathName
+                  window.location.href = newPathName + url.search
+                  return;
+                }
+                window.location.href = `${url.pathname}/${path}` + url.search
               }
             })}
           >
