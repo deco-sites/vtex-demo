@@ -27,8 +27,8 @@ const colors: Record<string, string | undefined> = {
 const useStyles = (value: string, checked: boolean) => {
   if (colors[value]) {
     return clx(
-      "h-8 w-8 block",
-      "border border-base-300 rounded-full",
+      "w-12 max-h-12 block",
+      "border border-[#C9CFCF] rounded-full",
       "ring-2 ring-offset-2",
       checked ? "ring-primary" : "ring-transparent",
     );
@@ -36,7 +36,10 @@ const useStyles = (value: string, checked: boolean) => {
 
   return clx(
     "btn btn-ghost",
-    checked && "btn-outline",
+    "w-12 h-12",
+    "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:border-[#C9CFCF] w-12 h-12",
+    "ring-2 ring-offset-2",
+    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]",
   );
 };
 

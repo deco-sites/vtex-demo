@@ -82,7 +82,7 @@ const Desktop = (
         </div>
 
         <ul class="flex">
-          {navItems?.slice(0, 4).map((item) => <NavItem item={item} />)}
+          {navItems?.slice(0, 10).map((item) => <NavItem item={item} />)}
         </ul>
 
         <div class="w-full flex items-center justify-end gap-2">

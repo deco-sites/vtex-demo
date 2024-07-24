@@ -5,7 +5,6 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import productDetailsPageVideo from "apps/vnda/loaders/productDetailsPageVideo.ts";
 
 export interface Props {
   /** @title Integration */
@@ -94,6 +93,9 @@ export default function GallerySlider(props: Props) {
               "carousel carousel-center",
               "sm:carousel-vertical",
               "gap-2",
+              "max-w-full",
+              "overflow-x-auto",
+              "sm:overflow-y-auto",
             )}
             style={{ maxHeight: "600px" }}
           >
