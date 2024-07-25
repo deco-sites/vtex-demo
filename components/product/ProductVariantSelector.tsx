@@ -27,8 +27,8 @@ const colors: Record<string, string | undefined> = {
 const useStyles = (value: string, checked: boolean) => {
   if (colors[value]) {
     return clx(
-      "h-8 w-8 block",
-      "border border-base-300 rounded-full",
+      "w-12 max-h-12 block",
+      "border border-[#C9CFCF] rounded-full",
       "ring-2 ring-offset-2",
       checked ? "ring-primary" : "ring-transparent",
     );
@@ -36,7 +36,10 @@ const useStyles = (value: string, checked: boolean) => {
 
   return clx(
     "btn btn-ghost",
-    checked && "btn-outline",
+    "w-12 h-12",
+    "btn btn-ghost border-[#C9CFCF] hover:bg-base-200 hover:border-[#C9CFCF] w-12 h-12",
+    "ring-2 ring-offset-2",
+    checked ? "ring-primary" : "ring-transparent border-[#C9CFCF]",
   );
 };
 
@@ -74,7 +77,7 @@ function VariantSelector({ product }: Props) {
       {Object.keys(possibilities).map((name) => (
         <li class="flex flex-col gap-2">
           <span class="text-sm">{name}</span>
-          <ul class="flex flex-row gap-4">
+          <ul class="flex flex-row gap-2 overflow-x-auto max-w-full p-2 md:gap-4 md:overflow-visible md:p-0 md:h-[60px] md:items-center">
             {Object.entries(possibilities[name])
               .filter(([value]) => value)
               .map(([value, link]) => {
@@ -82,7 +85,7 @@ function VariantSelector({ product }: Props) {
                 const checked = relativeLink === relativeUrl;
 
                 return (
-                  <li>
+                  <li class="inline-block shrink-0 max-w-full md:shrink">
                     <label
                       class="cursor-pointer grid grid-cols-1 grid-rows-1 place-items-center"
                       hx-get={useSection({ href: relativeLink })}

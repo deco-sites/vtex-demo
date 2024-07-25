@@ -5,7 +5,6 @@ import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
-import productDetailsPageVideo from "apps/vnda/loaders/productDetailsPageVideo.ts";
 
 export interface Props {
   /** @title Integration */

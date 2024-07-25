@@ -30,7 +30,7 @@ const removeItemHandler = () => {
   }
 };
 
-function CartItem({ item, index, locale, currency }: Props) {
+function CartItem({ item, index, }: Props) {
   const { image, listPrice, price = Infinity, quantity } = item;
   const isGift = price < 0.01;
 
