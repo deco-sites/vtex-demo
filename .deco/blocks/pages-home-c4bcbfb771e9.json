@@ -78,21 +78,6 @@
       "preload": true
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "products": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
-        "props": {
-          "query": "shirt",
-          "sort": "",
-          "hideUnavailableItems": true,
-          "fuzzy": "automatic",
-          "similars": true,
-          "count": 20
-        }
-      },
-      "title": "New Arrivals"
-    },
-    {
       "__resolveType": "site/sections/Category/CategoryGrid.tsx",
       "title": "Departments",
       "items": [
@@ -104,12 +89,12 @@
         {
           "href": "/shoes",
           "label": "Shoes",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/6ad95968-98fa-420d-97bf-68042edf1981"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/f9df32a4-d7e5-4103-8934-4ded0192a5f9"
         },
         {
           "href": "/accessories",
           "label": "Accessories",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/dbbdb9fc-0a12-44be-963e-6f92678d28bf"
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/6dba22e0-946b-4bff-9bb0-44959aed4d72"
         },
         {
           "href": "/Highlights",
@@ -117,6 +102,20 @@
           "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11943/9caf2e01-95c2-49c2-8408-9a733a160851"
         }
       ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "title": "New Arrivals",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "fuzzy": "enabled",
+          "query": "shoes",
+          "count": 10,
+          "sort": "",
+          "hideUnavailableItems": true
+        }
+      }
     },
     {
       "__resolveType": "website/flags/multivariate/section.ts",
@@ -136,7 +135,11 @@
             "title": "Custom made"
           },
           "rule": {
-            "__resolveType": "AB test - Banner Home"
+            "__resolveType": "website/matchers/location.ts",
+            "includeLocations": [
+              {}
+            ],
+            "excludeLocations": []
           }
         },
         {
